@@ -1,53 +1,75 @@
-# Next.js & HeroUI Template
+# 🌟 **Aplicación de Gestión de Eventos - Corte & Cía** 🌟
 
-This is a template for creating applications using Next.js 14 (app directory) and HeroUI (v2).
+Esta es la documentación de la aplicación frontend de Corte & Cía desarrollada con **Next.js** y **NextUI**, se conecta a la API de Gestión de Eventos de Corte & Cía.
 
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
+---
 
-## Technologies Used
+## ✨ **Descripción del Proyecto**
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [HeroUI v2](https://heroui.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+Nuestra aplicación es una interfaz moderna, accesible y atractiva para gestionar eventos, diseñada para aprovechar la API de Corte & Cía. Proporciona funcionalidades como:
 
-## How to Use
+- 🌍 Gestión de eventos.
+- 👥 Administración de asistentes.
+- 🎤 Organización de ponentes y patrocinadores.
+- 🏢 Manejo de ubicaciones.
 
-### Use the template with create-next-app
+---
+## 🛠 **Características Principales**
 
-To create a new project based on this template using `create-next-app`, run the following command:
+- **Interfaz Dinámica**: Construida con **Next.js** y **NextUI**, con soporte para modo oscuro 🌘.
+- **Consumo de API REST**: Conexión robusta a la API de Corte & Cía.
+- **Documentación Interactiva**: Accesible a través de Swagger.
+- **Componentes Personalizables**: Fácilmente adaptable a diferentes necesidades.
 
-```bash
-npx create-next-app -e https://github.com/heroui-inc/next-app-template
-```
+---
+## 💻 **Tecnologías Utilizadas**
 
-### Install dependencies
+- **Next.js** 🚀: Framework React para construir aplicaciones web modernas y de alto rendimiento.
+- **NextUI** 🎨: Biblioteca de componentes para crear una interfaz elegante y personalizable.
+- **Axios** 📡: Cliente HTTP para consumir y manejar peticiones a la API.
+- **Tailwind CSS** 🌈: Framework de utilidades para diseñar estilos de manera rápida y eficiente.
+- **Mermaid.js** 📊: Herramienta para crear diagramas y gráficos directamente en Markdown.
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+---
+## ⚙️ **Instalación y Configuración**
 
-```bash
-npm install
-```
+1. **Clona el repositorio**:
+   ```bash
+        git clone https://github.com/tu-usuario/tu-repositorio.git
+        cd tu-repositorio
+   
+2. **Instala las dependencias**:
+   ```bash
+        npm install
 
-### Run the development server
+3. **Configura las variables de entorno**: Crea un archivo ``.env.local`` en el directorio raíz con el siguiente contenido:
+   ```bash
+        NEXT_PUBLIC_API_BASE_URL=https://api-corte-cia.vercel.app
 
-```bash
-npm run dev
-```
+4. **Inicia la aplicación**:
+   ```bash
+        npm run dev
 
-### Setup pnpm (optional)
+---
+## 🚀 **Uso**
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
+### 📌 Acceso a la Aplicación
 
-```bash
-public-hoist-pattern[]=*@heroui/*
-```
+- Una vez configurada e iniciada, puedes acceder a la aplicación en `http://localhost:3000` o el puerto configurado.
+- Navega por las siguientes rutas clave para explorar las funcionalidades:
 
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+  - **Página Principal (`/`)**: Muestra un resumen de los eventos destacados y próximos.
+  - **Listado de Eventos (`/events`)**: Explora todos los eventos disponibles, filtrados por categoría o ubicación.
 
-## License
+---
+---
 
-Licensed under the [MIT license](https://github.com/heroui-inc/next-app-template/blob/main/LICENSE).
+## 📄 **Licencia**
+
+Este proyecto está bajo la licencia MIT. Consulta el archivo [MIT license](https://github.com/heroui-inc/next-app-template/blob/main/LICENSE) para más detalles.
+
+---
+
+🌟 **Desarrollado por** [Ilan Angeles Rodriguez](https://www.linkedin.com/in/ilanangelesrodriguez/)
+
+---
