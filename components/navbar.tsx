@@ -9,7 +9,6 @@ import {
   NavbarItem,
   NavbarMenuItem,
 } from "@heroui/navbar"
-import { Button } from "@heroui/button"
 import { Link } from "@heroui/link"
 import NextLink from "next/link"
 import clsx from "clsx"
