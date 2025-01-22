@@ -44,8 +44,8 @@ export const Logo: React.FC<IconSvgProps> = ({
         y2="371.94"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#9fbded" />
-        <stop offset="1" stop-color="#154bff" />
+        <stop offset="0" stopColor="#9fbded" />
+        <stop offset="1" stopColor="#154bff" />
       </linearGradient>
     </defs>
     <g id="OBJECTS">
