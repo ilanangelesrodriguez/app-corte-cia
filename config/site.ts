@@ -13,8 +13,8 @@ export const siteConfig = {
       href: "/services",
     },
     {
-      label: "Aprende",
-      href: "/learn",
+      label: "Nosotros",
+      href: "/about",
     },
   ],
   rightNavItems: [

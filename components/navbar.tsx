@@ -14,6 +14,7 @@ import { Link } from "@heroui/link"
 import NextLink from "next/link"
 import clsx from "clsx"
 import { ThemeSwitch } from "@/components/theme-switch"
+import { LoginButton } from "@/components/buttons/loginButton"
 import { Logo } from "@/components/icons"
 import { siteConfig } from "@/config/site"
 
@@ -47,7 +48,7 @@ export const Navbar = () => {
         <NavbarBrand className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <Logo className="text-primary" />
-            <p className="font-bold text-inherit text-xl">Corte & Cía</p>
+            <p className="font-bold text-xl">Corte & Cía</p>
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
@@ -67,13 +68,8 @@ export const Navbar = () => {
               {item.label}
             </NextLink>
           ))}
-          <Button
-            as={NextLink}
-            href="/login"
-            className="bg-primary/10 text-primary hover:bg-primary/20 font-medium px-4 rounded-full"
-          >
-            Entrar
-          </Button>
+          <ThemeSwitch />
+          <LoginButton />
         </NavbarItem>
       </NavbarContent>
 
@@ -98,13 +94,7 @@ export const Navbar = () => {
             </NavbarMenuItem>
           ))}
           <NavbarMenuItem>
-            <Button
-              as={NextLink}
-              href="/login"
-              className="bg-primary/10 text-primary hover:bg-primary/20 font-medium w-full mt-4"
-            >
-              Entrar
-            </Button>
+            <LoginButton mobile />
           </NavbarMenuItem>
         </div>
       </NavbarMenu>
