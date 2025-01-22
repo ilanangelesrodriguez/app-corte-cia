@@ -1,69 +1,37 @@
-export type SiteConfig = typeof siteConfig;
+export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Next.js + HeroUI",
-  description: "Make beautiful websites regardless of your design experience.",
-  navItems: [
+  name: "Corte & Cía",
+  description: "Plataforma de gestión de eventos profesionales.",
+  leftNavItems: [
     {
-      label: "Home",
-      href: "/",
+      label: "Soluciones",
+      href: "/solutions",
     },
     {
-      label: "Docs",
-      href: "/docs",
+      label: "Servicios",
+      href: "/services",
     },
     {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
+      label: "Nosotros",
       href: "/about",
     },
   ],
-  navMenuItems: [
+  rightNavItems: [
     {
-      label: "Profile",
-      href: "/profile",
+      label: "FAQ",
+      href: "/faq",
     },
     {
-      label: "Dashboard",
-      href: "/dashboard",
-    },
-    {
-      label: "Projects",
-      href: "/projects",
-    },
-    {
-      label: "Team",
-      href: "/team",
-    },
-    {
-      label: "Calendar",
-      href: "/calendar",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
+      label: "Soporte",
+      href: "/support",
     },
   ],
   links: {
-    github: "https://github.com/heroui-inc/heroui",
-    twitter: "https://twitter.com/hero_ui",
-    docs: "https://heroui.com",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    github: "https://github.com/corte-y-cia",
+    twitter: "https://twitter.com/corte_y_cia",
+    docs: "https://corte-y-cia.com/docs",
+    discord: "https://discord.gg/corte-y-cia",
   },
-};
+}
+
