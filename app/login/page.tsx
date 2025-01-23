@@ -4,7 +4,6 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { Card, CardHeader, CardBody } from "@heroui/card";
 import { Mail, Lock, ArrowRight } from "lucide-react"
-import Image from "next/image"
 import { Input } from "@heroui/input";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
