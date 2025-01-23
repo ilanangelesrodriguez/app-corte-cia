@@ -1,3 +1,3 @@
 import FeaturesSection from "./featureSection";
 
-export default FeaturesSection
+export default FeaturesSection;
