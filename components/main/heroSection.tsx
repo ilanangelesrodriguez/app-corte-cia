@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { Calendar, Users, Mic, MapPin, ArrowRight } from "lucide-react"
 import NextLink from "next/link"
 import { Button } from "@heroui/button"
-import { FeatureCard } from "./featureCard"
+import { FeatureCard } from "@/components/cards/featureCard"
 
 const HeroSection = () => {
   return (
