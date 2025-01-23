@@ -53,14 +53,14 @@ const HeroSection = () => {
         className="mb-12 z-20"
       >
         <motion.h1
-          className="text-6xl font-bold mb-4 text-white"
+          className="font-bold mb-4 text-sky-950 dark:text-blue-200 md:text-6xl text-4xl"
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 5, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
         >
           Corte & Cía
         </motion.h1>
         <motion.h2
-          className="text-3xl mb-8 text-blue-100"
+          className="md:text-3xl text-2xl mb-8 "
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
@@ -68,7 +68,7 @@ const HeroSection = () => {
           Revoluciona la Gestión de tus Eventos
         </motion.h2>
         <motion.p
-          className="text-xl text-blue-200 max-w-2xl mx-auto"
+          className="text-xl text-sky-950 dark:text-blue-200 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
