@@ -27,7 +27,6 @@ export const LoginButton = ({ className = "", mobile = false }: LoginButtonProps
         duration-300
         ${mobile ? "w-full justify-center" : "px-6"}
         py-2.5
-        rounded-full
         ${className}
       `}
     >
