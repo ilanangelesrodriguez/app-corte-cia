@@ -15,7 +15,7 @@ const steps: Step[] = [
             "Configura fechas, lugares, artistas y precios. Obtén análisis en tiempo real y gestiona tu evento desde un solo lugar.",
         icon: <Users className="w-6 h-6" />,
         illustration: (
-            <motion.div className="grid grid-cols-3 gap-2 w-48 h-36 mx-auto">
+            <motion.div className="grid grid-cols-3 gap-2 w-36 h-24 md:w-48 md:h-36 mx-auto">
                 {[...Array(6)].map((_, i) => (
                     <motion.div
                         key={i}
@@ -43,17 +43,17 @@ const steps: Step[] = [
                     {[...Array(8)].map((_, i) => (
                         <motion.div
                             key={i}
-                            className="absolute w-3 h-3 bg-purple-700/40 rounded-full"
+                            className="absolute w-4 h-4 bg-purple-700/40 rounded-full"
                             style={{
-                                top: "50%",
-                                left: "50%",
+                                top: "45%",
+                                left: "48%",
                                 transform: `rotate(${i * 45}deg) translate(60px) rotate(-${i * 45}deg)`,
                             }}
                         />
                     ))}
                 </motion.div>
                 <motion.div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-purple-700/40 rounded-full" />
+                    <div className="w-12 h-12 md:w-20 md:h-20 bg-purple-700/40 rounded-full" />
                 </motion.div>
             </motion.div>
         ),
@@ -64,7 +64,7 @@ const steps: Step[] = [
             "Gestiona patrocinios, visualiza métricas de impacto y coordina tu presencia en múltiples eventos.",
         icon: <Megaphone className="w-6 h-6" />,
         illustration: (
-            <motion.div className="w-36 h-36 mx-auto grid grid-cols-2 gap-2">
+            <motion.div className="w-20 h-20 md:w-36 md:h-36 mx-auto grid grid-cols-2 gap-2">
                 {[...Array(4)].map((_, i) => (
                     <motion.div
                         key={i}
@@ -83,7 +83,7 @@ const steps: Step[] = [
             "Compra entradas, descubre eventos, guarda tus favoritos y recibe recomendaciones personalizadas.",
         icon: <Ticket className="w-6 h-6" />,
         illustration: (
-            <motion.div className="relative w-48 h-36 mx-auto">
+            <motion.div className="relative w-36 h-24 md:w-48 md:h-36 mx-auto">
                 <motion.div
                     className="absolute inset-0"
                     animate={{
