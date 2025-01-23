@@ -68,7 +68,7 @@ const HeroSection = () => {
           Revoluciona la Gestión de tus Eventos
         </motion.h2>
         <motion.p
-          className="text-xl text-sky-950 dark:text-blue-200 max-w-2xl mx-auto"
+          className="text-lg text-sky-950 dark:text-blue-200 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
