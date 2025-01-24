@@ -36,7 +36,16 @@ const categories = [
   },
 ]
 
-export default function FAQCategories() {
+interface FAQCategoriesProps {
+  selectedCategory: string;
+  setSelectedCategory: (category: string) => void;
+}
+
+export default function FAQCategories({ selectedCategory, setSelectedCategory }: FAQCategoriesProps) {
+  const handleCategoryClick = (categoryTitle: string) => {
+    setSelectedCategory(selectedCategory === categoryTitle ? "" : categoryTitle);
+  };
+
   return (
     <div className="pb-8">
       <div className="container mx-auto px-4">
@@ -52,9 +61,10 @@ export default function FAQCategories() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="group relative overflow-hidden"
+              className="group relative overflow-hidden cursor-pointer"
+              onClick={() => handleCategoryClick(category.title)}
             >
-              <div className="relative p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-shadow">
+              <div className="relative p-4 md:p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-shadow">
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5"
                   initial={false}
