@@ -4,7 +4,11 @@ import { Input } from "@heroui/input"
 import { motion } from "framer-motion"
 import { HelpCircle, Search } from "lucide-react"
 
-export default function FAQHeader() {
+interface FAQHeaderProps {
+  setSearchQuery: (query: string) => void;
+}
+
+export default function FAQHeader({ setSearchQuery }: FAQHeaderProps) {
   return (
     <div className="relative overflow-hidden">
       {/* Fondo animado */}
@@ -32,7 +36,7 @@ export default function FAQHeader() {
         />
       </motion.div>
 
-      <div className="container mx-auto px-4 pb-8 relative">
+      <div className="container mx-auto px-0 pb-8 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -54,15 +58,18 @@ export default function FAQHeader() {
             </motion.div>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">¿Cómo podemos ayudarte?</h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+          <p className="text-sm md:text-lg text-gray-600 dark:text-gray-300 mb-8">
             Encuentra respuestas a las preguntas más frecuentes sobre nuestros servicios
           </p>
           <div className="relative max-w-xl mx-auto">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500" />
             <Input
               type="search"
               placeholder="Busca tu pregunta aquí..."
-              className="pl-10 h-12 backdrop-blur-sm"
+              className="h-12 backdrop-blur-sm"
+              startContent={
+                <Search className="text-gray-400 dark:text-gray-500" />
+            }
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
         </motion.div>
