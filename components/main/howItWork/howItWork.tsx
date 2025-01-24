@@ -13,7 +13,7 @@ export default function HowItWorks() {
     const prevStep = () => setCurrentStep((prev) => (prev - 1 + steps.length) % steps.length)
 
     useEffect(() => {
-        const interval = setInterval(nextStep, 5000)
+        const interval = setInterval(nextStep, 15000)
         return () => clearInterval(interval)
     }, [])
 
@@ -25,23 +25,27 @@ export default function HowItWorks() {
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="text-3xl md:text-5xl font-bold"
+                            className="text-xl md:text-5xl font-bold"
                         >
                             Crea o Compra tu{" "}
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
                                 Evento Ideal
                             </span>
                         </motion.h2>
-                        <div className="flex gap-2">
-                            <Button variant="faded" onClick={prevStep} className="rounded-full">
-                                <ChevronLeft className="w-4 h-4" />
+                        <div className="flex gap-1">
+                            <Button
+                                variant="faded"
+                                onClick={prevStep}
+                                className="rounded-full min-w-[3em]"
+                            >
+                                <ChevronLeft className="w-3 h-3 md:w-4 md:h-4" />
                             </Button>
                             <Button
                                 variant="faded"
                                 onClick={nextStep}
-                                className="rounded-full bg-blue-500 hover:bg-blue-600"
+                                className="rounded-full bg-blue-500 hover:bg-blue-600 min-w-[3em]"
                             >
-                                <ChevronRight className="w-4 h-4" />
+                                <ChevronRight className="w-3 h-3 md:w-4 md:h-4" />
                             </Button>
                         </div>
                     </div>
