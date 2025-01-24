@@ -19,13 +19,13 @@ export default function HowItWorks() {
 
     return (
         <div className="max-w-7xl">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto">
                 <div className="mx-auto">
                     <div className="flex justify-between items-center mb-12">
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="text-xl md:text-5xl font-bold"
+                            className="text-xl md:text-5xl text-left font-bold"
                         >
                             Crea o Compra tu{" "}
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">

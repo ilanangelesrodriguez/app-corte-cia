@@ -8,7 +8,7 @@ export default function FeaturesSection() {
   return (
     <div className="max-w-7xl relative flex flex-col md:flex-row items-center py-5 px-4 overflow-hidden">
       <div className="container mx-auto">
-        <div className="max-w-5xl relative z-10 pl-8">
+        <div className="max-w-5xl relative z-10 pl-2">
           <div className="flex items-center gap-2 mb-6">
             <span className="text-sm text-gray-600 dark:text-gray-400">Desde 2020</span>
           </div>
