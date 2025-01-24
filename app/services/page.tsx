@@ -1,9 +1,9 @@
-import { title } from "@/components/primitives";
+import HowItWorks from "@/components/main/howItWork";
 
 export default function ServicesPage() {
   return (
     <div>
-      <h1 className={title()}>Services</h1>
+      <HowItWorks />
     </div>
   );
 }

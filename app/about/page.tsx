@@ -1,9 +1,9 @@
-import { title } from "@/components/primitives";
+import FeaturesSection from "@/components/main/featureSection";
 
 export default function AboutPage() {
   return (
     <div>
-      <h1 className={title()}>About</h1>
+      <FeaturesSection />
     </div>
   );
 }
