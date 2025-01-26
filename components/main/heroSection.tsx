@@ -70,22 +70,22 @@ const HeroSection = () => {
         transition={{ delay: 0.8, duration: 0.8 }}
       >
         <FeatureCard
-          icon={<Calendar className="w-10 h-10 text-blue-500" />}
+          icon={<Calendar className="w-8 h-8 text-blue-500" />}
           title="Gestión de Eventos"
           description="Organiza y administra tus eventos con facilidad. "
         />
         <FeatureCard
-          icon={<Users className="w-10 h-10 text-purple-500" />}
-          title="Administración de Asistentes"
+          icon={<Users className="w-8 h-8 text-purple-500" />}
+          title="Asistentes"
           description="Controla la asistencia y gestiona participantes"
         />
         <FeatureCard
-          icon={<Mic className="w-10 h-10 text-yellow-500" />}
-          title="Ponentes y Patrocinadores"
+          icon={<Mic className="w-8 h-8 text-yellow-500" />}
+          title="Patrocinadores"
           description="Coordina speakers y sponsors eficientemente."
         />
         <FeatureCard
-          icon={<MapPin className="w-10 h-10 text-red-500" />}
+          icon={<MapPin className="w-8 h-8 text-red-500" />}
           title="Ubicaciones"
           description="Gestiona múltiples locaciones para tus eventos."
         />

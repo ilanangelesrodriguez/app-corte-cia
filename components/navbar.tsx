@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, Home, Info, Phone, User, Settings, LogIn } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { Logo } from "@/components/icons"
 import { ThemeSwitch } from "@/components/theme-switch"
 import { LoginButton } from "@/components/buttons/loginButton"
@@ -33,26 +33,9 @@ export const Navbar = () => {
     return () => {
       document.removeEventListener("click", handleOutsideClick)
     }
-  }, [isMenuOpen, closeMenu]) // Added closeMenu to dependencies
+  }, [isMenuOpen, closeMenu])
 
   const navItems = [...siteConfig.leftNavItems, ...siteConfig.rightNavItems]
-
-  const getIcon = (label: string) => {
-    switch (label.toLowerCase()) {
-      case "home":
-        return <Home size={20} />
-      case "about":
-        return <Info size={20} />
-      case "contact":
-        return <Phone size={20} />
-      case "profile":
-        return <User size={20} />
-      case "settings":
-        return <Settings size={20} />
-      default:
-        return null
-    }
-  }
 
   return (
     <nav className="fixed top-0 w-full bg-background/60 backdrop-blur-md border-b border-white/10 z-50">
@@ -94,7 +77,6 @@ export const Navbar = () => {
                     : "text-gray-800 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700"
                 }`}
               >
-                {getIcon(item.label)}
                 <span className="ml-2">{item.label}</span>
               </Link>
             ))}
@@ -149,14 +131,13 @@ export const Navbar = () => {
                   }`}
                   onClick={toggleMenu}
                 >
-                  {getIcon(item.label)}
                   <span className="ml-2">{item.label}</span>
                 </Link>
                 ))}
               </div>
               </div>
               <div className="px-6 py-6 border-t border-gray-200 dark:border-gray-700">
-              <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
+                <h3 className="text-lg font-semibold mb-2">Enlaces Rápidos</h3>
               <ul className="space-y-2">
                 <li>
                 <Link href="/faq" className="text-gray-600 dark:text-gray-400 hover:text-primary">
