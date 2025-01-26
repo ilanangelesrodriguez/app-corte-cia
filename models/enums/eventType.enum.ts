@@ -1,7 +1,7 @@
 export enum EventType {
-    CONFERENCE = "conferencia",
-    MEETUP = "encuentro",
-    WORKSHOP = "taller",
-    SOCIAL = "social",
-    OTHER = "otro",
+    CONFERENCE = 'conferencia',
+    CONCERT = 'concierto',
+    WORKSHOP = 'taller',
+    WEBINAR = 'seminario web',
+    OTHER = 'otro'
 }
