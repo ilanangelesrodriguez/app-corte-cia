@@ -7,15 +7,22 @@ import { Mail, Lock, ArrowRight } from "lucide-react"
 import { Input } from "@heroui/input";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
+import { useAuth } from "@/context/authContext";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const { login } = useAuth()
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Aquí iría la lógica de autenticación
-    console.log("Login attempt", { email, password })
+    try {
+      await login(email, password)
+      console.log("Login successful")
+      // Redirigir a la página principal o dashboard
+    } catch (error) {
+      console.error("Login failed", error)
+    }
   }
 
   return (
