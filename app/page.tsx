@@ -1,6 +1,4 @@
-import FeaturesSection from "@/components/main/featureSection";
 import HeroSection from "@/components/main/heroSection";
-import HowItWorks from "@/components/main/howItWork";
 
 export default function Home() {
   return (

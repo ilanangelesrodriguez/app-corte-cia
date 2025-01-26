@@ -72,11 +72,11 @@ export default function FAQCategories({ selectedCategory, setSelectedCategory }:
                   transition={{ duration: 0.3 }}
                 />
                 <div className="relative">
-                  <div className="flex items-center justify-center gap-4">
+                  <div className="flex items-center pl-5 gap-4">
                     <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400">
                       <category.icon className="w-6 h-6" />
                     </div>
-                    <div className="text-left md:text-center">
+                    <div className="text-left">
                       <h3 className="text-lg font-semibold">{category.title}</h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400">{category.description}</p>
                     </div>
