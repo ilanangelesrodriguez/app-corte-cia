@@ -3,10 +3,10 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { useRouter } from "next/navigation"
-import { useAuth } from "@/context/authContext"
 import { Card, CardBody, CardHeader } from "@heroui/card"
 import { LoginForm } from "@/components/login/loginForm"
 import { Alert } from "@heroui/alert"
+import { useAuth } from "@/hooks/useAuth"
 
 export default function LoginPage() {
   const [error, setError] = useState<{ title: string; description: string } | null>(null)

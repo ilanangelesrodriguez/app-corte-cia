@@ -1,3 +1,4 @@
+import { LoginResponse } from "@/models/loginReponse.model";
 import api from "./api";
 
 export const login = async (email: string, password: string): Promise<LoginResponse> => {
