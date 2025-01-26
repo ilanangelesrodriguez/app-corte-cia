@@ -77,7 +77,7 @@ export const Navbar = () => {
                     : "text-gray-800 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700"
                 }`}
               >
-                <span className="ml-2">{item.label}</span>
+                <span>{item.label}</span>
               </Link>
             ))}
             <div className="ml-4">
