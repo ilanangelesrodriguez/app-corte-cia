@@ -5,8 +5,8 @@ export const siteConfig = {
   description: "Plataforma de gestión de eventos profesionales.",
   leftNavItems: [
     {
-      label: "Soluciones",
-      href: "/solutions",
+      label: "Eventos",
+      href: "/events",
     },
     {
       label: "Servicios",
