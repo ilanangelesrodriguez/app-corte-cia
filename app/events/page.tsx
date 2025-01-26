@@ -7,73 +7,27 @@ import {Image} from "@heroui/image";
 import EventDetails from "@/components/events/eventsDetails"
 import { Button } from "@heroui/button";
 import { Card, CardBody, CardFooter } from "@heroui/card";
-
-interface Event {
-  id: string
-  title: string
-  description: string
-  date: string
-  location: string
-  image: string
-  attendees: number
-}
+import { Event } from "@/models/event.model";
+import { getEvents } from "@/services/event.service";
 
 export default function EventsPage() {
   const [events, setEvents] = useState<Event[]>([])
-  const [loading, setLoading] = useState(true)
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null)
 
   useEffect(() => {
-    async function fetchEvents() {
+    const fetchEvents = async () => {
       try {
-        const response = await fetch("https://api-corte-cia.vercel.app/v1/api/events")
-        const data = await response.json()
-        setEvents(data)
+        const events = await getEvents()
+        setEvents(events)
       } catch (error) {
         console.error("Error fetching events:", error)
-      } finally {
-        setLoading(false)
       }
     }
 
     fetchEvents()
   }, [])
-  useEffect(() => {
-    // Example static data
-    const exampleEvents: Event[] = [
-      {
-        id: "1",
-        title: "Concierto de Rock",
-        description: "Un emocionante concierto con bandas locales.",
-        date: "2023-11-15",
-        location: "Auditorio Nacional",
-        image: "https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg",
-        attendees: 150,
-      },
-      {
-        id: "2",
-        title: "Feria de Tecnología",
-        description: "Explora las últimas innovaciones en tecnología.",
-        date: "2023-12-01",
-        location: "Centro de Convenciones",
-        image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
-        attendees: 300,
-      },
-      {
-        id: "3",
-        title: "Festival de Comida",
-        description: "Disfruta de una variedad de comidas.",
-        date: "2023-12-20",
-        location: "Parque Central",
-        image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg",
-        attendees: 500,
-      },
-    ]
 
-    setEvents(exampleEvents)
-    setLoading(false)
-  }, [])
-
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -92,17 +46,7 @@ export default function EventsPage() {
     },
   }
 
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center h-screen">
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-          className="w-16 h-16 border-t-4 border-blue-500 border-solid rounded-full"
-        />
-      </div>
-    )
-  }
+
 
   if (events.length === 0) {
     return (
@@ -155,16 +99,16 @@ export default function EventsPage() {
               <CardBody className="p-0">
                 <Image
                   src={event.image || "/placeholder.svg?height=200&width=350"}
-                  alt={event.title}
+                  alt={event.name}
                   className="w-full h-48 object-cover"
                 />
               </CardBody>
               <CardFooter className="flex flex-col items-start">
-                <h2 className="text-2xl font-semibold mb-2">{event.title}</h2>
+                <h2 className="text-2xl font-semibold mb-2">{event.name}</h2>
                 <p className="text-gray-600 mb-4 text-left">{event.description.substring(0, 100)}...</p>
                 <div className="flex items-center text-gray-500 mb-2">
                   <Calendar className="mr-2" size={16} />
-                  <span>{new Date(event.date).toLocaleDateString()}</span>
+                  <span>{new Date(event.startDate).toLocaleDateString()}</span>
                 </div>
                 <div className="flex items-center text-gray-500 mb-2">
                   <MapPin className="mr-2" size={16} />
@@ -172,7 +116,7 @@ export default function EventsPage() {
                 </div>
                 <div className="flex items-center text-gray-500">
                   <Users className="mr-2" size={16} />
-                  <span>{event.attendees} asistentes</span>
+                  <span>{event.status} asistentes</span>
                 </div>
               </CardFooter>
             </Card>

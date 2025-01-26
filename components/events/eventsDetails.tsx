@@ -5,16 +5,7 @@ import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader } from "@herou
 import {Image} from "@heroui/image";
 import { motion } from "framer-motion"
 import { Calendar, MapPin, Clock, Users } from "lucide-react"
-
-interface Event {
-  id: string
-  title: string
-  description: string
-  date: string
-  location: string
-  image: string
-  attendees: number
-}
+import { Event } from "@/models/event.model";
 
 interface EventDetailsProps {
   event: Event
@@ -27,7 +18,7 @@ export default function EventDetails({ event, onClose }: EventDetailsProps) {
       <ModalContent>
         <ModalHeader className="flex flex-col gap-1">
           <motion.h2 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="text-2xl font-bold">
-            {event.title}
+            {event.name}
           </motion.h2>
         </ModalHeader>
         <ModalBody>
@@ -38,18 +29,18 @@ export default function EventDetails({ event, onClose }: EventDetailsProps) {
           >
             <Image
               src={event.image || "/placeholder.svg?height=300&width=600"}
-              alt={event.title}
+              alt={event.name}
               className="w-full h-64 object-cover rounded-lg mb-4"
             />
             <p className="text-gray-700 text-start mb-4">{event.description}</p>
             <div className="grid grid-cols-2 gap-4">
               <div className="flex items-center text-gray-600">
                 <Calendar className="mr-2" size={20} />
-                <span>{new Date(event.date).toLocaleDateString()}</span>
+                <span>{new Date(event.startDate).toLocaleDateString()}</span>
               </div>
               <div className="flex items-center text-gray-600">
                 <Clock className="mr-2" size={20} />
-                <span>{new Date(event.date).toLocaleTimeString()}</span>
+                <span>{new Date(event.startDate).toLocaleTimeString()}</span>
               </div>
               <div className="flex items-center text-gray-600">
                 <MapPin className="mr-2" size={20} />
@@ -57,7 +48,7 @@ export default function EventDetails({ event, onClose }: EventDetailsProps) {
               </div>
               <div className="flex items-center text-gray-600">
                 <Users className="mr-2" size={20} />
-                <span>{event.attendees} asistentes</span>
+                <span>{event.status} asistentes</span>
               </div>
             </div>
           </motion.div>
