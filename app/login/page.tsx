@@ -16,10 +16,8 @@ export default function LoginPage() {
   const handleLogin = async (email: string, password: string) => {
     try {
       await login(email, password)
-      console.log("Login successful")
       router.push("/dashboard")
     } catch (error) {
-      console.error("Login failed", error)
       setError({
         title: "Inicio de sesión fallido",
         description: "Por favor, verifica tus credenciales."
@@ -35,11 +33,11 @@ export default function LoginPage() {
         transition={{ duration: 0.3 }}
       >
         <Card className="m-auto">
-          <CardHeader className="flex flex-col items-start px-4 py-5 space-y-1">
+          <CardHeader className="flex flex-col justify-center items-center px-4 py-5 space-y-1">
             <h2 className="text-2xl font-bold">¡Bienvenido de nuevo!</h2>
             <p className="text-sm text-default-500">Inicia sesión en tu cuenta para continuar</p>
           </CardHeader>
-          <CardBody className="px-4 py-2 pb-5">
+          <CardBody className="px-8 py-2 pb-5">
             <LoginForm onSubmit={handleLogin} />
           </CardBody>
         </Card>
