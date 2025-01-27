@@ -36,6 +36,7 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
         onChange={(e) => setEmail(e.target.value)}
         startContent={<Mail className="text-default-400" size={20} />}
         required
+        errorMessage="Por favor, introduce un correo electrónico válido."
       />
       <Input
         type="password"
@@ -45,6 +46,7 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
         onChange={(e) => setPassword(e.target.value)}
         startContent={<Lock className="text-default-400" size={20} />}
         required
+        errorMessage="La contraseña es obligatoria."
       />
       <Button type="submit" color="primary" className="w-full">
         Iniciar Sesión <ArrowRight className="ml-2" size={20} />
