@@ -50,7 +50,7 @@ export default function RootLayout({
             {/* Efecto de iluminación */}
             <div className="absolute inset-0 bg-gradient-to-b from-blue-500/30 to-transparent z-10 pointer-events-none" />
 
-            <main className="container mx-auto max-w-full pt-16 px-6 flex-grow">
+            <main className="container mx-auto max-w-full pt-16 px-6 z-10 flex-grow">
               {children}
             </main>
             <Footer />
